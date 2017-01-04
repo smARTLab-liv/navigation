@@ -521,7 +521,7 @@ namespace move_base {
     //get the starting pose of the robot
     tf::Stamped<tf::Pose> global_pose;
     if(!planner_costmap_ros_->getRobotPose(global_pose)) {
-      ROS_WARN("Unable to get starting pose of robot, unable to create global plan");
+      ROS_WARN_THROTTLE(2, "Unable to get starting pose of robot, unable to create global plan");
       return false;
     }
 
